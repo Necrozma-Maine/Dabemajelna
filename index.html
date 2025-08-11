@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- link for google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap"
+        rel="stylesheet">
+
+    <!-- link for font awesome links -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+
+    <nav class="navbar">
+        <a href="#" class="logo">CODEBY<span>DABE</span></a>
+        <div class="nav-links">
+            <a href="#" class="nav-link">Home</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#" class="nav-link">About</a>
+            <a href="#" class="nav-link">Skills</a>
+            <a href="#" class="nav-link">Contacts</a>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Fresh Grad. Web Developer. Code Enthusiast.</h1>
+                    <h2>Web Developer</h2>
+                    <p>I’m a fresh graduate with a passion for web development, skilled in both frontend and backend
+                        technologies. Through my academic projects, I’ve built responsive, user-friendly websites and
+                        solid backend systems. I’m eager to bring my skills, creativity, and dedication into real-world
+                        projects.
+
+                    </p>
+                    <div class="btn-group">
+                        <a href="#" class="btn btn-primary">
+                            <i class="fas fa-rocket"></i> View Projects
+                        </a>
+                        <a href="#" class="btn">
+                            <i class="fas fa-paper-plane"></i> Contact Me
+                        </a>
+                    </div>
+                </div>
+
+                <div class="profile-container">
+                    <div class="profile-wrapper">
+                        <img src="images/profile-me4.png" alt="Profile" class="profile-img">
+                        <div class="glow-effect"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- projects -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="images/DOST-NAST.png" alt="Project 1" class="project-img">
+                    <div class="project-info">
+                        <h3 class="project-title">Portfolio Website</h3>
+                        <p class="project-desc">A modern, responsive portfolio built with HTML, CSS, and JavaScript.</p>
+                        <a href="https://yourportfolio.com" class="btn btn-primary" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Visit Site
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="images/project2.png" alt="Project 2" class="project-img">
+                    <div class="project-info">
+                        <h3 class="project-title">Blog Platform</h3>
+                        <p class="project-desc">A full-featured blog platform with backend integration.</p>
+                        <a href="https://yourblog.com" class="btn btn-primary" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Visit Site
+                        </a>
+                    </div>
+                </div>
+                <!-- Add more project-card blocks as needed -->
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">codeby<span>dabe</span></div>
+                <p class="footer-text">Let's Dive more into the world of web development together</p>
+                <div class="social-links">
+                    <a href="https://github.com/Necrozma-Maine" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="https://www.facebook.com/davemajelna13" class="social-link"><i
+                            class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/davi.ivii/" class="social-link"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/majelna-dave-omar-e-3501a2371/" class="social-link"><i
+                            class="fab fa-linkedin-in"></i></a>
+                </div>
+                <p class="footer-text">© 2025 CodebyDabe. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Javascript code here -->
+
+    <div id="carousel-modal" class="carousel-modal">
+        <div class="carousel-content">
+            <span class="carousel-close">&times;</span>
+            <img id="carousel-img" src="" alt="Project Image">
+            <div class="carousel-controls">
+                <button id="carousel-prev"><i class="fas fa-chevron-left"></i></button>
+                <button id="carousel-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
