@@ -103,6 +103,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    
+
     function showCarouselImage() {
         carouselImg.src = projectImages[currentProject].images[currentImage];
     }
@@ -129,5 +131,5 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    
+
 });

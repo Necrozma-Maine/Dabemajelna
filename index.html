@@ -20,6 +20,8 @@
         integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+
+
 </head>
 
 <body>
@@ -31,8 +33,8 @@
             <a href="#" class="nav-link">Home</a>
             <a href="#projects" class="nav-link">Projects</a>
             <a href="#about" class="nav-link">About</a>
-            <a href="#" class="nav-link">Skills</a>
-            <a href="#" class="nav-link">Contacts</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#contact" class="nav-link">Contacts</a>
         </div>
 
         <div class="hamburger" id="hamburger">
@@ -45,6 +47,13 @@
     <section id="hero">
         <div class="container">
             <div class="hero-content">
+
+                <div class="profile-container">
+                    <div class="profile-wrapper">
+                        <img src="images/profile-me4.png" alt="Profile" class="profile-img">
+                        <div class="glow-effect"></div>
+                    </div>
+                </div>
                 <div class="hero-text">
                     <h1>Fresh Grad. Web Developer. Code Enthusiast.</h1>
                     <h2>Web Developer</h2>
@@ -58,16 +67,9 @@
                         <a href="#projects" class="btn btn-primary">
                             <i class="fas fa-rocket"></i> View Projects
                         </a>
-                        <a href="#" class="btn">
-                            <i class="fas fa-paper-plane"></i> Contact Me
+                        <a href="file/MAJELNA_DAVE_OMAR_E_RESUME_FINAL.pdf" class="btn" download>
+                            <i class="fa-solid fa-file-pdf"></i> Download Resume
                         </a>
-                    </div>
-                </div>
-
-                <div class="profile-container">
-                    <div class="profile-wrapper">
-                        <img src="images/profile-me4.png" alt="Profile" class="profile-img">
-                        <div class="glow-effect"></div>
                     </div>
                 </div>
             </div>
@@ -77,12 +79,12 @@
     <!-- projects -->
     <section id="projects">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <h2 class="section-title">Featured <span class="neon-text"> Projects</span></h2>
             <div class="projects-grid">
                 <div class="project-card">
                     <img src="images/DOST-NAST.png" alt="Project 1" class="project-img">
                     <div class="project-info">
-                        <h3 class="project-title">Portfolio Website</h3>
+                        <h3 class="project-title">NAST Official Website</h3>
                         <p class="project-desc">A modern, responsive portfolio built with HTML, CSS, and JavaScript.</p>
                         <a href="https://yourportfolio.com" class="btn btn-primary" target="_blank">
                             <i class="fas fa-external-link-alt"></i> Visit Site
@@ -148,7 +150,76 @@
             </div>
         </div>
     </section>
-    
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container skills-container">
+            <div class="skills-title-row">
+                <div class="rocket-launch-inline">
+                    <i class="fas fa-rocket rocket-icon"></i>
+                    <div class="rocket-fire"></div>
+                </div>
+                <h2 class="section-title">My <span class="neon-text">Skills</span></h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skills-category">
+                    <h3 class="skills-subtitle"><i class="fas fa-code"></i> Technical Skills</h3>
+                    <div class="skills-list">
+                        <span class="skill-badge html"><i class="fab fa-html5"></i> HTML</span>
+                        <span class="skill-badge css"><i class="fab fa-css3-alt"></i>CSS</span>
+                        <span class="skill-badge js"><i class="fab fa-js-square"></i>JavaScript</span>
+                        <span class="skill-badge php"><i class="fab fa-php"></i>PHP</span>
+                        <span class="skill-badge python"><i class="fab fa-python"></i>Python</span>
+                        <span class="skill-badge mysql"><i class="fas fa-database"></i>MySQL</span>
+                        <span class="skill-badge laravel"><i class="fab fa-laravel"></i>Laravel</span>
+                        <span class="skill-badge react"><i class="fab fa-react"></i>React</span>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3 class="skills-subtitle"><i class="fas fa-user-astronaut"></i> Soft Skills</h3>
+                    <div class="skills-list">
+                        <span class="skill-badge soft">Problem Solving</span>
+                        <span class="skill-badge soft">Teamwork</span>
+                        <span class="skill-badge soft">Communication</span>
+                        <span class="skill-badge soft">Adaptability</span>
+                        <span class="skill-badge soft">Creativity</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="space-bg">
+            <div class="planet planet1"></div>
+            <div class="planet planet2"></div>
+            <div class="planet planet3"></div>
+            <div class="planet planet4"></div>
+            <div class="planet planet5"></div>
+            <div class="planet planet6"></div>
+            <div class="stars"></div>
+            <div class="container contact-container">
+                <h2 class="section-title"><i class="fas fa-envelope"></i> <span class="neon-text">Contact Me
+                        here!</span></h2>
+                <form class="contact-form">
+                    <div class="form-row">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-row">
+                        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
 
 
     <!-- Footer Section -->
@@ -171,18 +242,18 @@
         </div>
     </footer>
 
-    <!-- Javascript code here -->
-
     <div id="carousel-modal" class="carousel-modal">
         <div class="carousel-content">
-            <span class="carousel-close">&times;</span>
-            <img id="carousel-img" src="" alt="Project Image">
-            <div class="carousel-controls">
-                <button id="carousel-prev"><i class="fas fa-chevron-left"></i></button>
-                <button id="carousel-next"><i class="fas fa-chevron-right"></i></button>
+            <div class="carousel-img-wrapper">
+                <img id="carousel-img" src="" alt="Project Image">
+                <button class="carousel-close"><i class="fas fa-times"></i></button>
+                <button id="carousel-prev" class="carousel-btn left"><i class="fas fa-chevron-left"></i></button>
+                <button id="carousel-next" class="carousel-btn right"><i class="fas fa-chevron-right"></i></button>
             </div>
         </div>
     </div>
+
+    <!-- Javascript code here -->
 
     <script src="script.js"></script>
 
