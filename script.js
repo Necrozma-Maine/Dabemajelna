@@ -76,8 +76,38 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         {
             images: [
-                "images/project2.png",
-                "images/project2-2.png"
+                "images/NAST-ASM1.png",
+                "images/DOST-ASM2.png",
+                "images/DOST-ASM3.png",
+                "images/DOST-ASM4.png",
+                "images/DOST-ASM5.png"
+            ]
+        },
+        {
+            images: [
+                "images/EMS1.png",
+                "images/EMS2.png",
+                "images/EMS3.png",
+                "images/EMS4.png",
+                "images/EMS3.png"
+            ]
+        },
+        {
+            images: [
+                "images/CENTER1.png",
+                "images/CENTER2.png",
+                "images/CENTER3.png",
+                "images/CENTER4.png",
+                "images/CENTER5.png"
+            ]
+        },
+        {
+            images: [
+                "images/ICT1.png",
+                "images/ICT2.png",
+                "images/ICT3.png",
+                "images/ICT4.png"
+              
             ]
         }
         // Add more projects as needed
@@ -103,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    
+
 
     function showCarouselImage() {
         carouselImg.src = projectImages[currentProject].images[currentImage];
