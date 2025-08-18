@@ -68,8 +68,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const projectImages = [
         {
             title: "NAST Official Website",
-            description: "Designed and developed a responsive government website focused on transparency and public information. Implemented user-friendly navigation and accessibility features for improved public access to scientific information.",
-            description1: "Designed and developed a responsive government website focused on transparency and public information. Implemented user-friendly navigation and accessibility features for improved public access to scientific information.",
+            description: "Collaborated in planning and designing the official website of the National Academy of Science and Technology (NAST). Created wireframes and page layouts for core sections such as Home, About, Members, Publications, Careers, Contact Us, and Transparency. Ensured mobile responsiveness, accessibility compliance, and UI consistency. Worked closely with the development team to align design mockups with implementation for a seamless user experience.",
+            description1: [
+                "Designed and developed a responsive government website",
+                "Implemented user-friendly navigation system",
+                "Added accessibility features for improved public access",
+                "Integrated scientific information database",
+                "Optimized for mobile devices and different screen sizes"
+            ],
             technologies: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL"],
             link: "https://example.com/nast",
             images: [
@@ -198,14 +204,24 @@ document.addEventListener('DOMContentLoaded', function () {
         // Update project info
         document.querySelector('.carousel-project-title').textContent = project.title;
         document.querySelector('.carousel-project-desc').textContent = project.description;
-        document.querySelector('.carousel-project-desc1').textContent = project.description1;
 
-        // Update tech badges
+        const bulletPoints = project.description1.map(point => `<li>${point}</li>`).join('');
+        document.querySelector('.carousel-project-desc1').innerHTML = `
+        <h4 class="features-title">Key Features:</h4>
+        <ul class="project-bullets">${bulletPoints}</ul>
+    `;
+
+        // Update tech badges with title and custom colors
         const techList = document.querySelector('.carousel-tech-list');
-        techList.innerHTML = project.technologies
-            .map(tech => `<span class="tech-badge">${tech}</span>`)
-            .join('');
-
+        techList.innerHTML = `
+        <h4 class="features-title">Technologies Used:</h4>
+        <div class="tech-badges-container">
+            ${project.technologies.map(tech => {
+            const colorClass = `tech-${tech.toLowerCase().replace(/[0-9.]/g, '')}`;
+            return `<span class="tech-badge ${colorClass}">${tech}</span>`;
+        }).join('')}
+        </div>
+    `;
         // Update link
         const link = document.querySelector('.carousel-link');
         link.href = project.link;

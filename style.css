@@ -873,6 +873,115 @@ footer {
     margin-top: 20px;
 }
 
+.project-bullets {
+    list-style: none;
+    padding-left: 0;
+    margin: 15px 0;
+}
+
+.project-bullets li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    color: var(--text-dim);
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.project-bullets li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--neon-violet);
+    font-size: 1.4rem;
+    line-height: 1;
+    top: -2px;
+}
+
+.features-title {
+    color: var(--neon-violet);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.3rem;
+    margin: 20px 0 15px;
+    text-shadow: 0 0 8px rgba(191, 0, 255, 0.3);
+}
+
+.tech-badges-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.tech-badge {
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.tech-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Language-specific colors */
+.tech-html {
+    background: #e34c26;
+    border: 1px solid #f06529;
+}
+
+.tech-css {
+    background: #264de4;
+    border: 1px solid #2965f1;
+}
+
+.tech-javascript {
+    background: #f0db4f;
+    border: 1px solid #f7df1e;
+    color: #323330;
+}
+
+.tech-php {
+    background: #777bb3;
+    border: 1px solid #8892be;
+}
+
+.tech-mysql {
+    background: #00758f;
+    border: 1px solid #f29111;
+}
+
+@media (max-width: 576px) {
+    .tech-badge {
+        padding: 4px 12px;
+        font-size: 0.8rem;
+    }
+
+    .tech-badges-container {
+        gap: 8px;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .features-title {
+        font-size: 1.1rem;
+        margin: 15px 0 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .project-bullets li {
+        font-size: 1rem;
+        padding-left: 20px;
+        margin-bottom: 8px;
+    }
+}
+
 /* Update mobile responsive styles */
 @media (max-width: 768px) {
     .carousel-img-wrapper {
