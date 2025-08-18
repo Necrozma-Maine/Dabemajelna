@@ -1000,12 +1000,25 @@ footer {
         padding: 10px;
     }
 
+    #carousel-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+
     .carousel-img-wrapper {
-        height: calc(100vh - 120px);
+        height: 75vh;
+        /* Increased height */
+        width: 100%;
+        /* Full width */
     }
 
     .carousel-info-container {
-        height: calc(100vh - 120px);
+        height: 80vh;
+        /* Increased height */
+        width: 100%;
+        /* Full width */
         padding: 20px;
     }
 
@@ -1024,47 +1037,86 @@ footer {
 
     .view-desc-btn,
     .view-images-btn {
-        width: calc(100% - 20px);
-        max-width: 300px;
-        margin: 10px auto;
+        padding: 8px 15px;
+        font-size: 0.9rem;
+        min-width: 140px;
+        margin: 5px auto;
+        height: 35px;
+        /* Fixed height for better tap target */
     }
 }
 
 @media (max-width: 576px) {
+    .carousel-modal {
+        padding: 0;
+        /* Remove any padding */
+    }
+
+    .carousel-content {
+        height: 100vh;
+        width: 100%;
+    }
+
     .carousel-container {
         padding: 5px;
     }
 
     .carousel-img-wrapper {
-        height: 60vh;
-        width: 92%;
+        height: 100vh;
+        /* Even larger for mobile */
+        width: 100%;
+        margin: 0;
     }
 
     .carousel-info-container {
-        height: 70vh;
-        width: 92%;
+        height: 100vh;
+        /* Match image height */
+        width: 100%;
         padding: 15px;
+        margin: 0;
     }
 
     .carousel-project-title {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
+        margin-bottom: 15px;
     }
 
     .carousel-project-desc {
         font-size: 1rem;
+        line-height: 1.6;
     }
 
     .view-desc-btn,
     .view-images-btn {
-        padding: 6px 16px;
+        padding: 6px 12px;
         font-size: 0.85rem;
         min-width: 120px;
+        height: 32px;
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2001;
     }
 
     .carousel-btn {
         width: 28px;
         height: 28px;
         font-size: 0.8rem;
+    }
+
+    /* Adjust navigation buttons */
+    .carousel-btn {
+        width: 35px;
+        height: 35px;
+    }
+
+    .carousel-btn.left {
+        left: 10px;
+    }
+
+    .carousel-btn.right {
+        right: 10px;
     }
 }
 
