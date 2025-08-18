@@ -67,6 +67,11 @@ document.addEventListener('DOMContentLoaded', function () {
     // Carousel logic
     const projectImages = [
         {
+            title: "NAST Official Website",
+            description: "Designed and developed a responsive government website focused on transparency and public information. Implemented user-friendly navigation and accessibility features for improved public access to scientific information.",
+            description1: "Designed and developed a responsive government website focused on transparency and public information. Implemented user-friendly navigation and accessibility features for improved public access to scientific information.",
+            technologies: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL"],
+            link: "https://example.com/nast",
             images: [
                 "images/DOST-NAST.png",
                 "images/DOST-NAST-2.png",
@@ -107,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 "images/ICT2.png",
                 "images/ICT3.png",
                 "images/ICT4.png"
-              
+
             ]
         }
         // Add more projects as needed
@@ -119,16 +124,25 @@ document.addEventListener('DOMContentLoaded', function () {
     const carouselClose = document.querySelector('.carousel-close');
     const carouselPrev = document.getElementById('carousel-prev');
     const carouselNext = document.getElementById('carousel-next');
+    const viewDescBtn = document.querySelector('.view-desc-btn');
+    const viewImagesBtn = document.querySelector('.view-images-btn');
+    const carouselImgSection = document.querySelector('.carousel-img-section');
+    const carouselInfoSection = document.querySelector('.carousel-info-section');
+
 
     let currentProject = 0;
     let currentImage = 0;
 
+    // Update the project card click handler
     projectCards.forEach((img, idx) => {
         img.addEventListener('click', () => {
             currentProject = idx;
             currentImage = 0;
             showCarouselImage();
             carouselModal.classList.add('active');
+            // Show image section by default
+            carouselImgSection.classList.add('active');
+            carouselInfoSection.classList.remove('active');
             document.body.style.overflow = 'hidden';
         });
     });
@@ -149,9 +163,13 @@ document.addEventListener('DOMContentLoaded', function () {
         showCarouselImage();
     });
 
+    // Update close handler to reset view
     carouselClose.addEventListener('click', () => {
         carouselModal.classList.remove('active');
         document.body.style.overflow = '';
+        // Reset to image view for next opening
+        carouselImgSection.classList.add('active');
+        carouselInfoSection.classList.remove('active');
     });
 
     carouselModal.addEventListener('click', (e) => {
@@ -160,6 +178,38 @@ document.addEventListener('DOMContentLoaded', function () {
             document.body.style.overflow = '';
         }
     });
+
+    viewDescBtn.addEventListener('click', () => {
+        carouselImgSection.classList.remove('active');
+        carouselInfoSection.classList.add('active');
+    });
+
+    viewImagesBtn.addEventListener('click', () => {
+        carouselInfoSection.classList.remove('active');
+        carouselImgSection.classList.add('active');
+    });
+
+
+    // Update the carousel display function
+    function showCarouselImage() {
+        const project = projectImages[currentProject];
+        carouselImg.src = project.images[currentImage];
+
+        // Update project info
+        document.querySelector('.carousel-project-title').textContent = project.title;
+        document.querySelector('.carousel-project-desc').textContent = project.description;
+        document.querySelector('.carousel-project-desc1').textContent = project.description1;
+
+        // Update tech badges
+        const techList = document.querySelector('.carousel-tech-list');
+        techList.innerHTML = project.technologies
+            .map(tech => `<span class="tech-badge">${tech}</span>`)
+            .join('');
+
+        // Update link
+        const link = document.querySelector('.carousel-link');
+        link.href = project.link;
+    }
 
 
 });

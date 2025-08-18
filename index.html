@@ -275,13 +275,44 @@
         </div>
     </footer>
 
+    <!-- Carousel Modal -->
     <div id="carousel-modal" class="carousel-modal">
-        <div class="carousel-content">
-            <div class="carousel-img-wrapper">
-                <img id="carousel-img" src="" alt="Project Image">
+        <div class="container">
+            <div class="carousel-content">
                 <button class="carousel-close"><i class="fas fa-times"></i></button>
-                <button id="carousel-prev" class="carousel-btn left"><i class="fas fa-chevron-left"></i></button>
-                <button id="carousel-next" class="carousel-btn right"><i class="fas fa-chevron-right"></i></button>
+                <div class="carousel-container">
+                    <!-- Carousel Image -->
+                    <div class="carousel-img-section active">
+                        <div class="carousel-img-wrapper">
+                            <img id="carousel-img" src="" alt="Project Image">
+                            <button id="carousel-prev" class="carousel-btn left"><i
+                                    class="fas fa-chevron-left"></i></button>
+                            <button id="carousel-next" class="carousel-btn right"><i
+                                    class="fas fa-chevron-right"></i></button>
+                        </div>
+                        <button class="btn btn-primary view-desc-btn">
+                            <i class="fas fa-info-circle"></i> View Description
+                        </button>
+                    </div>
+
+                    <!-- Carousel Info -->
+                    <div class="carousel-info-section">
+                        <div class="carousel-info-container">
+                            <h3 class="carousel-project-title">Project Title</h3>
+                            <p class="carousel-project-desc">Project description goes here...</p>
+                            <p class="carousel-project-desc1">Project description1 goes here...</p>
+                            <div class="carousel-tech-list">
+                                <!-- Technology badges will be added dynamically -->
+                            </div>
+                            <a href="#" class="btn btn-primary carousel-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Visit Site
+                            </a>
+                        </div>
+                        <button class="btn btn-primary view-images-btn">
+                            <i class="fas fa-images"></i> View Images
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
