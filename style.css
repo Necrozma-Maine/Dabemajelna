@@ -761,7 +761,7 @@ footer {
 .carousel-project-title {
     font-size: 2rem;
     font-family: 'Orbitron', sans-serif;
-    color: var(--neon-violet);
+    color: var(--text-light);
     margin-bottom: 12px;
     letter-spacing: 1px;
     text-shadow: 0 0 8px var(--neon-violet);
@@ -954,6 +954,13 @@ footer {
     background: #00758f;
     border: 1px solid #f29111;
 }
+
+.tech-laravel {
+    background: #FF2D20;
+    border: 1px solid #f8463d;
+}
+
+
 
 @media (max-width: 576px) {
     .tech-badge {
@@ -1299,6 +1306,20 @@ footer {
         right: 10px;
         font-size: 1.5rem;
     }
+
+    .carousel-link {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+        min-width: 120px;
+        height: 32px;
+        margin-top: 10px;
+
+    }
+
+    .carousel-link i {
+        font-size: 0.85rem;
+        margin-right: 6px;
+    }
 }
 
 
@@ -1609,6 +1630,171 @@ footer {
     transform: scale(1.12) translateY(-6px);
     box-shadow: 0 0 30px var(--neon-violet);
 }
+
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 40px 0;
+}
+
+.skill-item {
+    background: rgba(30, 0, 40, 0.85);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(191, 0, 255, 0.3);
+}
+
+.skill-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+}
+
+.skill-item:hover .skill-icon {
+    transform: scale(1.2);
+}
+
+.skill-name {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--text-light);
+}
+
+.skill-bar-container {
+    position: relative;
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover .skill-bar-container {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skill-bar {
+    width: 100%;
+    height: 8px;
+    background: var(--darker-bg);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    border-radius: 4px;
+    width: 0;
+    transition: width 1s ease;
+}
+
+.skill-percentage {
+    position: absolute;
+    right: 0;
+    top: -25px;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+/* Skill-specific colors */
+.skill-icon.html {
+    color: #e34c26;
+}
+
+.skill-progress.html {
+    background: #e34c26;
+}
+
+.skill-icon.css {
+    color: #264de4;
+}
+
+.skill-progress.css {
+    background: #264de4;
+}
+
+.skill-icon.javascript {
+    color: #f0db4f;
+}
+
+.skill-progress.javascript {
+    background: #f0db4f;
+}
+
+.skill-icon.php {
+    color: #777bb3;
+}
+
+.skill-progress.php {
+    background: #777bb3;
+}
+
+.skill-icon.python {
+    color: #3776ab;
+}
+
+.skill-progress.python {
+    background: #3776ab;
+}
+
+.skill-icon.mysql {
+    color: #00758f;
+}
+
+.skill-progress.mysql {
+    background: #00758f;
+}
+
+.skill-icon.laravel {
+    color: #ff2d20;
+}
+
+.skill-progress.laravel {
+    background: #ff2d20;
+}
+
+.skill-icon.react {
+    color: #61dafb;
+}
+
+.skill-progress.react {
+    background: #61dafb;
+}
+
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .skill-item {
+        padding: 20px;
+    }
+
+    .skill-icon {
+        font-size: 2rem;
+    }
+
+    .skill-name {
+        font-size: 1rem;
+    }
+}
+
 
 @keyframes badgePop {
     0% {
@@ -1938,12 +2124,38 @@ footer {
     animation: fadeInUp 1.2s cubic-bezier(0.77, 0, 0.18, 1);
 }
 
+/* Update mobile styles */
 @media (max-width: 576px) {
     .contact-container {
-        padding: 30px 8px;
+        max-width: 90%;
+        margin: 40px auto 30px auto;
+        padding: 30px 20px;
     }
 
     .space-bg {
         min-height: 480px;
+    }
+
+    .contact-form {
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .form-row input,
+    .form-row textarea {
+        padding: 12px 15px;
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+
+    .contact-form .btn {
+        margin-top: 5px;
+        font-size: 1rem;
+        padding: 12px 20px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
     }
 }

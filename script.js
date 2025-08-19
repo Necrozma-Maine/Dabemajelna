@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 "Integrated scientific information database",
                 "Optimized for mobile devices and different screen sizes"
             ],
-            technologies: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL"],
+            technologies: ["Laravel", "HTML5", "CSS3", "JavaScript", "PHP", "MySQL"],
             link: "https://example.com/nast",
             images: [
                 "images/DOST-NAST.png",
@@ -86,6 +86,17 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
         },
         {
+            title: "NAST - Annual Scientific Meeting System",
+            description: "Designed a Laravel-based admin platform to manage organizational databases. Included CRUD with validation, pagination, and filtering. Added user activity logs, customizable themes, and security settings for tailored admin control.",
+            description1: [
+                "CRUD operations with validation and search filters",
+                "Soft delete (trashbin) and recovery system",
+                "Transaction and activity logs",
+                "User account management with settingse",
+                "Customizable themes and interface options"
+            ],
+            technologies: ["Laravel", "HTML5", "CSS3", "JavaScript", "PHP", "MySQL"],
+            link: "https://example.com/nast",
             images: [
                 "images/NAST-ASM1.png",
                 "images/DOST-ASM2.png",
@@ -95,15 +106,37 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
         },
         {
+            title: "NAST - Event Management System",
+            description: "Developed a web-based platform for managing events and venue bookings with advanced tracking features. Integrated QR code-based registration and attendance scanning. Enabled administrators to control users, events, and venues with built-in reporting and email automation.",
+            description1: [
+                "QR code-based registration and attendance tracking",
+                "Role-based access control (Admin & Staff)",
+                "Event and venue scheduling with conflict prevention",
+                "Reporting dashboard with event statistics",
+                "Automated email confirmations and notifications"
+            ],
+            technologies: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL"],
+            link: "https://example.com/nast",
             images: [
                 "images/EMS1.png",
                 "images/EMS2.png",
                 "images/EMS3.png",
                 "images/EMS4.png",
-                "images/EMS3.png"
+                "images/EMS5.png"
             ]
         },
         {
+            title: "Maharlika Medication Request System",
+            description: "Built a patient-centered web application to streamline medication requests for barangay residents. Integrated ID verification, prescription uploads, and SMS updates for request status. Improved",
+            description1: [
+                "Patient registration with valid ID verification",
+                "Secure medication and prescription upload",
+                "Request review by nurses and doctors",
+                "SMS notifications for request status",
+                "Admin dashboard for health workers"
+            ],
+            technologies: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL"],
+            link: "https://example.com/nast",
             images: [
                 "images/CENTER1.png",
                 "images/CENTER2.png",
@@ -113,6 +146,17 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
         },
         {
+            title: "ICT - Borrower's Management System",
+            description: "Developed an inventory management platform to log, track, and manage ICT equipment. Provided borrowing workflows with request and return logs. Allowed administrators to monitor assets and maintain accurate records.",
+            description1: [
+                "Borrowing and returning workflows",
+                "Real-time equipment availability tracking",
+                "Transaction history and reporting",
+                "Admin controls for adding and updating inventory",
+                "Database-backed system for accuracy and security"
+            ],
+            technologies: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL"],
+            link: "https://example.com/nast",
             images: [
                 "images/ICT1.png",
                 "images/ICT2.png",
@@ -228,4 +272,26 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 
+
+
+
+
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const skillItems = document.querySelectorAll('.skill-item');
+
+    skillItems.forEach(item => {
+        const progressBar = item.querySelector('.skill-progress');
+        const percentageSpan = item.querySelector('.skill-percentage');
+        const percentage = percentageSpan.textContent.replace('%', '');
+
+        item.addEventListener('mouseenter', () => {
+            progressBar.style.width = `${percentage}%`;
+        });
+
+        item.addEventListener('mouseleave', () => {
+            progressBar.style.width = '0';
+        });
+    });
 });
